@@ -23,6 +23,8 @@ export default function Read() {
                 {storageItem.map((item) => (
                     <li key={item.id}>
                         <div>{item.name}</div>
+                        <div>{item.amount}</div>
+                        <div>{item.price}</div>
                     </li>
                 ))}
             </ul>
