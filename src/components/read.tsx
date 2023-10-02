@@ -18,16 +18,22 @@ export default function Read() {
     
 
     return (
-        <div>
-            <ul>
-                {storageItem.map((item) => (
-                    <li key={item.id}>
-                        <div>{item.name}</div>
-                        <div>{item.amount}</div>
-                        <div>{item.price}</div>
-                    </li>
-                ))}
-            </ul>
+        <div className="bg-slate-100 p-10 m-3 rounded-xl shadow-md">
+            <h1 className="text-lg font-bold text-center uppercase">Storage</h1>
+            <div className="">
+                <ul>
+                    {storageItem.map((item) => (
+                        <li key={item.id}>
+                            <p className="text-sm font-medium m-2">Name</p>
+                            <div className="text-sm m-2">{item.name}</div>
+                            <p className="text-sm font-medium m-2">Amount</p>
+                            <div className="text-sm m-2">{item.amount}</div>
+                            <p className="text-sm font-medium m-2">Price</p>
+                            <div className="text-sm m-2">{item.price}</div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }
