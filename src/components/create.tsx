@@ -49,9 +49,9 @@ export default function Create() {
     }, [])
     
     return (
-        <div className="p-20 m-5  bg-slate-100 rounded-xl shadow-md">
+        <div className="p-10 m-3  bg-slate-100 rounded-xl shadow-md">
             <form onSubmit={handleSubmit}  className="flex flex-col space-y-2">
-                <label htmlFor="name">Name</label>
+                <label className="font-medium text-sm uppercase m-2" htmlFor="name">Name</label>
                 <input className="rounded-xl p-1 bg-slate-50 hover:bg-slate-200 shadow-md"
                 type="text"
                 id="name"
@@ -63,7 +63,7 @@ export default function Create() {
                 required
                 />
 
-                <label htmlFor="amount">Amount</label>
+                <label className="font-medium text-sm uppercase m-2" htmlFor="amount">Amount</label>
                 <input className="rounded-xl p-1 bg-slate-50 hover:bg-slate-200 shadow-md"
                 type="text"
                 id="amount"
@@ -75,7 +75,7 @@ export default function Create() {
                 required
                 />
 
-                <label htmlFor="price">Price</label>
+                <label className="font-medium text-sm uppercase m-2" htmlFor="price">Price</label>
                 <input className="rounded-xl p-1 bg-slate-50 hover:bg-slate-200 shadow-md"
                 type="text"
                 id="price"
@@ -87,7 +87,7 @@ export default function Create() {
                 required
                 />
 
-                <button type="submit">Create Item</button>
+                <button type="submit" className="bg-slate-50 shadow-md mt-4 rounded-lg p-2 uppercase font-bold hover:text-slate-700 hover:bg-slate-200">Create Item</button>
             </form>
         </div>
     )
