@@ -49,46 +49,47 @@ export default function Create() {
     }, [])
     
     return (
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={newStorageItem.name}
-          onChange={(e) =>
-            setNewStorageItem({ ...newStorageItem, name: e.target.value })
-          }
-          required
-        />
+        <div className="p-20 m-5  bg-slate-100 rounded-xl shadow-md">
+            <form onSubmit={handleSubmit}  className="flex flex-col space-y-2">
+                <label htmlFor="name">Name</label>
+                <input className="rounded-xl p-1 bg-slate-50 hover:bg-slate-200 shadow-md"
+                type="text"
+                id="name"
+                name="name"
+                value={newStorageItem.name}
+                onChange={(e) =>
+                    setNewStorageItem({ ...newStorageItem, name: e.target.value })
+                }
+                required
+                />
 
-        <label htmlFor="amount">Amount</label>
-        <input
-          type="text"
-          id="amount"
-          name="amount"
-          value={newStorageItem.amount}
-          onChange={(e) =>
-            setNewStorageItem({ ...newStorageItem, amount: e.target.value })
-          }
-          required
-        />
+                <label htmlFor="amount">Amount</label>
+                <input className="rounded-xl p-1 bg-slate-50 hover:bg-slate-200 shadow-md"
+                type="text"
+                id="amount"
+                name="amount"
+                value={newStorageItem.amount}
+                onChange={(e) =>
+                    setNewStorageItem({ ...newStorageItem, amount: e.target.value })
+                }
+                required
+                />
 
-        <label htmlFor="price">Price</label>
-        <input
-          type="text"
-          id="price"
-          name="price"
-          value={newStorageItem.price}
-          onChange={(e) =>
-            setNewStorageItem({ ...newStorageItem, price: e.target.value })
-          }
-          required
-        />
+                <label htmlFor="price">Price</label>
+                <input className="rounded-xl p-1 bg-slate-50 hover:bg-slate-200 shadow-md"
+                type="text"
+                id="price"
+                name="price"
+                value={newStorageItem.price}
+                onChange={(e) =>
+                    setNewStorageItem({ ...newStorageItem, price: e.target.value })
+                }
+                required
+                />
 
-        <button type="submit">Create Item</button>
-      </form>
-
+                <button type="submit">Create Item</button>
+            </form>
+        </div>
     )
     
 }
