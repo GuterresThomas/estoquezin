@@ -34,7 +34,6 @@ export default function Create() {
                 price: '',
             })
             fetchItem()
-            window.location.reload()
         }
     }
 
@@ -42,6 +41,7 @@ export default function Create() {
         event.preventDefault();
         createItem();
         alert('Item adicionado');
+        fetchItem()
     }
 
     useEffect(() => {

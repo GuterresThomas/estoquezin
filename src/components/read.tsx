@@ -11,6 +11,23 @@ export default function Read() {
         console.log(data)
     }
 
+    const deleteItem =async (id) => {
+        const response = await fetch(`http://localhost:3030/items/${id}`,{
+            headers: {
+                'Origin': 'http://localhost:3002',
+            },
+            method: 'DELETE'
+    });
+
+    if (response.ok) {
+        alert('Succsess in delete item!')
+        // Se a exclusão for bem-sucedida, atualize a lista de itens
+        fetchItem();
+    } else {
+        console.error('failed action');
+    }
+    }
+
 
     useEffect(() => {
         fetchItem()
@@ -30,6 +47,7 @@ export default function Read() {
                             <div className="text-sm m-2">{item.amount}</div>
                             <p className="text-sm font-medium m-2">Price</p>
                             <div className="text-sm m-2">{item.price}</div>
+                            <button onClick={() => deleteItem(item.id)} className="bg-slate-50 shadow-md mt-4 rounded-lg p-2 uppercase font-bold hover:text-slate-700 hover:bg-slate-200">Delete</button>
                         </li>
                     ))}
                 </ul>
